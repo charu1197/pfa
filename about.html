@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Philippine Finance Association</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode:"class",
+            theme:{extend:{colors:{
+                "surface-tint":"#415f8f","surface-container-high":"#e2e8f8","on-secondary-fixed-variant":"#594325",
+                "on-primary-fixed-variant":"#284775","on-secondary":"#ffffff","tertiary":"#111518",
+                "surface-container-highest":"#dce2f3","on-primary":"#ffffff","inverse-surface":"#2a313d",
+                "secondary-fixed":"#ffddb6","outline-variant":"#c4c6d0","on-primary-fixed":"#001b3d",
+                "on-tertiary-fixed-variant":"#44474b","surface-container":"#e7eefe","on-surface":"#151c27",
+                "on-secondary-fixed":"#291801","surface":"#f9f9ff","inverse-primary":"#aac7fd",
+                "primary-container":"#002855","on-surface-variant":"#43474f","tertiary-fixed":"#e1e2e7",
+                "tertiary-fixed-dim":"#c4c6cb","surface-variant":"#dce2f3","on-error-container":"#93000a",
+                "error":"#ba1a1a","primary":"#001430","surface-container-lowest":"#ffffff",
+                "on-background":"#151c27","surface-container-low":"#f0f3ff","primary-fixed":"#d6e3ff",
+                "on-error":"#ffffff","background":"#f9f9ff","surface-bright":"#f9f9ff","outline":"#747780",
+                "on-tertiary":"#ffffff","primary-fixed-dim":"#aac7fd","on-secondary-container":"#785e3e",
+                "error-container":"#ffdad6","secondary":"#735a3a","on-primary-container":"#7490c3",
+                "secondary-container":"#fddab2","surface-dim":"#d3daea","secondary-fixed-dim":"#e2c19b",
+                "on-tertiary-fixed":"#191c1f","inverse-on-surface":"#ebf1ff","tertiary-container":"#26292d",
+                "on-tertiary-container":"#8d9094",
+            },borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},
+            fontFamily:{headline:["Manrope"],body:["Inter"],label:["Inter"]}}},
+        };
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+
+    <!-- NAV -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm glass-nav">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center h-20">
+            <a href="index.html" class="flex items-center">
+                <img src="images/pfa.png" alt="PFA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-slate-500 font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-primary font-bold border-b-2 border-amber-500 transition-colors" href="about.html">About</a>
+                <a class="text-slate-500 font-medium hover:text-primary transition-colors" href="news.html">News</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-surface-container transition-colors" aria-label="Open menu">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+            <a href="about.html#membership" class="hidden md:block bg-primary px-6 py-2.5 rounded-lg text-on-primary font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-primary/10">
+                Join PFA
+            </a>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4 space-y-3">
+            <a href="index.html" class="block py-2 text-primary font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-primary font-medium">About</a>
+            <a href="news.html" class="block py-2 text-primary font-medium">News</a>
+            <a href="about.html#membership" class="block py-2 text-amber-600 font-bold">Join PFA</a>
+        </div>
+    </header>
+    <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    </script>
+
+    <main class="pt-20">
+
+        <!-- ── Hero ───────────────────────────────────────────── -->
+        <section class="bg-background py-24 md:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 reveal">
+                        <span class="text-secondary font-headline uppercase tracking-widest text-sm mb-4 block">Our Story</span>
+                        <h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-primary mb-8 leading-none">
+                            Since 1962.<br /><span class="text-editorial-gradient">Built to Last.</span>
+                        </h1>
+                        <p class="text-on-surface-variant max-w-xl leading-relaxed mb-8">
+                            The Philippine Finance Association (PFA), formerly known as the Philippine Association of Finance Companies (PAFCI), is a major advocate of change and development in the financing and leasing industry since its establishment in 1962.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#timeline" class="px-8 py-4 bg-primary text-on-primary rounded-md font-medium hover:opacity-90 transition-opacity">
+                                Explore Our Timeline
+                            </a>
+                            <a href="#mission" class="px-8 py-4 border border-primary text-primary rounded-md font-medium hover:bg-surface-container transition-colors">
+                                Our Mission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 relative reveal reveal-delay-1">
+                        <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden shadow-2xl shadow-blue-900/10">
+                            <img class="w-full h-full object-cover grayscale brightness-90 hover:scale-105 transition-transform duration-700"
+                                alt="Makati skyline" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" />
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-secondary-container p-8 rounded-lg hidden md:block">
+                            <span class="text-4xl font-headline font-bold text-on-secondary-container">1962</span>
+                            <p class="text-xs uppercase tracking-widest text-on-secondary-container mt-1">Est. Year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Mission & Vision ───────────────────────────────── -->
+        <section id="mission" class="bg-surface-container-low py-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 bg-surface-container-lowest p-12 rounded-xl flex flex-col justify-center reveal">
+                        <span class="material-symbols-outlined text-secondary text-4xl mb-6">visibility</span>
+                        <h2 class="text-3xl font-headline font-bold text-primary mb-6">Our Vision</h2>
+                        <p class="text-xl text-on-surface-variant leading-relaxed"></p>
+                    </div>
+                    <div class="bg-primary text-on-primary p-12 rounded-xl flex flex-col justify-end reveal reveal-delay-1">
+                        <span class="material-symbols-outlined text-secondary-fixed text-4xl mb-6">flag</span>
+                        <h2 class="text-2xl font-headline font-bold mb-4">The Mission</h2>
+                        <p class="text-sm text-on-primary-container leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Key Contributions ──────────────────────────────── -->
+        <section id="contributions" class="bg-background py-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-outline-variant/15 pb-8 reveal">
+                    <h2 class="text-4xl font-headline font-bold text-primary">Key Contributions</h2>
+                    <p class="text-on-surface-variant max-w-sm text-right hidden md:block italic">"Shaping the industry since 1962."</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="group reveal">
+                        <div class="text-5xl font-headline font-light text-secondary mb-4 opacity-50 group-hover:opacity-100 transition-opacity">01</div>
+                        <h3 class="text-xl font-bold mb-2"></h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed"></p>
+                    </div>
+                    <div class="group reveal reveal-delay-1">
+                        <div class="text-5xl font-headline font-light text-secondary mb-4 opacity-50 group-hover:opacity-100 transition-opacity">02</div>
+                        <h3 class="text-xl font-bold mb-2"></h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed"></p>
+                    </div>
+                    <div class="group reveal reveal-delay-2">
+                        <div class="text-5xl font-headline font-light text-secondary mb-4 opacity-50 group-hover:opacity-100 transition-opacity">03</div>
+                        <h3 class="text-xl font-bold mb-2"></h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">.</p>
+                    </div>
+                    <div class="group reveal reveal-delay-3">
+                        <div class="text-5xl font-headline font-light text-secondary mb-4 opacity-50 group-hover:opacity-100 transition-opacity">04</div>
+                        <h3 class="text-xl font-bold mb-2"></h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Presidents Timeline ────────────────────────────── -->
+        <section id="timeline" class="bg-surface-container-low py-24">
+            <div class="max-w-5xl mx-auto px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-secondary font-headline uppercase tracking-widest text-sm mb-4 block">Leadership Legacy</span>
+                    <h2 class="text-4xl font-headline font-bold text-primary mb-4">Presidents of the PFA</h2>
+                    <p class="text-on-surface-variant max-w-xl mx-auto">A legacy of visionary leadership spanning over six decades of shaping Philippine finance.</p>
+                </div>
+
+                <!-- Vertical Timeline -->
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-outline-variant/40 hidden md:block"></div>
+                    <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-outline-variant/40 md:hidden"></div>
+
+                    <!-- Current President (shown first after array_reverse) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-amber-400 border-amber-400 z-10 shadow"></div>
+                            <div class="bg-primary text-on-primary rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary-fixed uppercase tracking-widest">2022–Present</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-1 font-headline">Carlo Enrico B. Lazatin</h3>
+                                <p class="text-xs text-on-primary-container uppercase tracking-widest font-semibold mb-3">President — Current</p>
+                                <p class="text-sm text-on-primary-container leading-relaxed">The current president of PFA, Lazatin has set an ambitious agenda anchored on three pillars: Transparency, Digital Transformation, and Sustainable Investment.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end">
+                                <div class="bg-primary text-on-primary rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary-fixed uppercase tracking-widest">2022–Present</span>
+                                    <h3 class="text-xl font-bold text-white mt-1 mb-1 font-headline">Carlo Enrico B. Lazatin</h3>
+                                    <p class="text-xs text-on-primary-container uppercase tracking-widest font-semibold mb-3">President — Current</p>
+                                    <p class="text-sm text-on-primary-container leading-relaxed">The current president of PFA, Lazatin has set an ambitious agenda anchored on three pillars: Transparency, Digital Transformation, and Sustainable Investment.</p>
+                                </div>
+                            </div>
+                            <div class="pl-12 flex items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-amber-400 border-amber-400 shadow-lg shadow-amber-400/40 z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Former Presidents (right side) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div>
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Atty. Jude R. Romano</h3>
+                                <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                            <div class="pl-12">
+                                <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                    <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Atty. Jude R. Romano</h3>
+                                    <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div>
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Arnaldo S. Bacabac Jr.</h3>
+                                <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end">
+                                <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                    <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Arnaldo S. Bacabac Jr.</h3>
+                                    <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                                </div>
+                            </div>
+                            <div class="pl-12 flex items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remaining former presidents -->
+                    <!-- 2022–2022 Agerico S. Verzola (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div>
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Agerico S. Verzola</h3>
+                                <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                            <div class="pl-12">
+                                <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary uppercase tracking-widest">2022–2022</span>
+                                    <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Agerico S. Verzola</h3>
+                                    <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021–2022 Alfonso C. Tanseco (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div>
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary uppercase tracking-widest">2021–2022</span>
+                                <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Alfonso C. Tanseco</h3>
+                                <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end">
+                                <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary uppercase tracking-widest">2021–2022</span>
+                                    <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Alfonso C. Tanseco</h3>
+                                    <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                                </div>
+                            </div>
+                            <div class="pl-12 flex items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021–2021 Leonardo G. Serrano Jr. (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3">
+                        <div class="md:hidden flex items-start w-full pl-14">
+                            <div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div>
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8">
+                                <span class="text-xs font-bold text-secondary uppercase tracking-widest">2021–2021</span>
+                                <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Leonardo G. Serrano Jr.</h3>
+                                <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8">
+                            <div class="pr-12 flex justify-end items-start pt-10">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div>
+                            </div>
+                            <div class="pl-12">
+                                <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow">
+                                    <span class="text-xs font-bold text-secondary uppercase tracking-widest">2021–2021</span>
+                                    <h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Leonardo G. Serrano Jr.</h3>
+                                    <p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2020–2021 Conrad G. Marty (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2020–2021</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Conrad G. Marty</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2020–2021</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Conrad G. Marty</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div>
+                    </div>
+                    <!-- 2019–2020 Danilo T. Reyes (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2019–2020</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Danilo T. Reyes</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2019–2020</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Danilo T. Reyes</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div>
+                    </div>
+                    <!-- 2018–2019 Henry S. Valdez (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2018–2019</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Henry S. Valdez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2018–2019</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Henry S. Valdez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div>
+                    </div>
+                    <!-- 2017–2018 Carmen V.F. Serina (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2017–2018</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Carmen V.F. Serina</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2017–2018</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Carmen V.F. Serina</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div>
+                    </div>
+                    <!-- 2016–2017 Rosario B. Villangca (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2016–2017</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Rosario B. Villangca</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2016–2017</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Rosario B. Villangca</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div>
+                    </div>
+                    <!-- 2014–2016 Manuel H. Lopez (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3">
+                        <div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2014–2016</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel H. Lopez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div>
+                        <div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2014–2016</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel H. Lopez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div>
+                    </div>
+
+                    <!-- 2012–2014 Protacio C. Bantayan Jr. (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2012–2014</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Protacio C. Bantayan Jr.</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2012–2014</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Protacio C. Bantayan Jr.</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 2010–2012 Manuel P. Tiaoqui (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2010–2012</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel P. Tiaoqui</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2010–2012</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel P. Tiaoqui</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 2008–2010 Elizabeth L. Garcia (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2008–2010</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Elizabeth L. Garcia</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2008–2010</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Elizabeth L. Garcia</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 2006–2008 Cesar A. Tejada (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2006–2008</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Cesar A. Tejada</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2006–2008</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Cesar A. Tejada</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 2004–2006 Manuel P. Tiaogui (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2004–2006</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel P. Tiaogui</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2004–2006</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Manuel P. Tiaogui</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 2002–2004 Vicente L. Ramirez (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2002–2004</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Vicente L. Ramirez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2002–2004</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Vicente L. Ramirez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 2000–2002 Evangeline C. Escobillo (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2000–2002</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Evangeline C. Escobillo</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">2000–2002</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Evangeline C. Escobillo</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 1998–2000 Ricardo M. Dela Torre (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1998–2000</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Ricardo M. Dela Torre</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1998–2000</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Ricardo M. Dela Torre</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 1996–1998 Roberto C. Galang (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1996–1998</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Roberto C. Galang</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1996–1998</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Roberto C. Galang</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 1994–1996 Ricardo M. Lazatin (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1994–1996</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Ricardo M. Lazatin</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1994–1996</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Ricardo M. Lazatin</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 1992–1994 Antonio P. Tecson (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1992–1994</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Antonio P. Tecson</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1992–1994</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Antonio P. Tecson</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 1990–1992 Eduardo R. Alvarez (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1990–1992</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Eduardo R. Alvarez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1990–1992</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Eduardo R. Alvarez</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 1988–1990 Estelito C. Casal (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-1"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1988–1990</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Estelito C. Casal</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1988–1990</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Estelito C. Casal</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+                    <!-- 1986–1988 Jose Vito Borromeo (right) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-2"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1986–1988</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Jose Vito Borromeo</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div><div class="pl-12"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1986–1988</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Jose Vito Borromeo</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div></div></div>
+                    <!-- 1984–1986 Atty. Rodolfo N. Publico (left) -->
+                    <div class="relative flex items-start mb-12 md:mb-0 reveal reveal-delay-3"><div class="md:hidden flex items-start w-full pl-14"><div class="absolute left-[18px] top-3 w-4 h-4 rounded-full border-2 bg-white border-primary z-10 shadow"></div><div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm w-full mb-8"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1984–1986</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Atty. Rodolfo N. Publico</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="hidden md:grid grid-cols-2 w-full gap-0 py-8"><div class="pr-12 flex justify-end"><div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm max-w-sm w-full hover:shadow-md transition-shadow"><span class="text-xs font-bold text-secondary uppercase tracking-widest">1984–1986</span><h3 class="text-xl font-bold text-primary mt-1 mb-1 font-headline">Atty. Rodolfo N. Publico</h3><p class="text-xs text-secondary uppercase tracking-widest font-semibold mb-3">Former President</p></div></div><div class="pl-12 flex items-start pt-10"><div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 bg-white border-primary z-10 shadow" style="margin-top:2.5rem"></div></div></div></div>
+
+                </div><!-- end timeline -->
+            </div>
+        </section>
+
+        <!-- ── Current Leadership ─────────────────────────────── -->
+        <section class="bg-surface-container-low py-32">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative group reveal">
+                        <div class="aspect-square bg-surface-container-highest rounded-xl overflow-hidden relative z-10">
+                            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                                alt="President Carlo Enrico B. Lazatin" src="images/carlo3.jpg" />
+                        </div>
+                        <div class="absolute -top-10 -right-10 w-full h-full border border-secondary/20 rounded-xl -z-0"></div>
+                    </div>
+                    <div class="reveal reveal-delay-1">
+                        <span class="text-secondary font-headline uppercase tracking-widest text-sm mb-4 block">Current Leadership</span>
+                        <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">Carlo Enrico B. Lazatin</h2>
+                        <p class="text-on-secondary-container font-headline uppercase tracking-widest text-xs mb-8">President, Philippine Finance Association · 2022–Present</p>
+                        <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                            <p>The youngest president in PFA history, Mr. Lazatin brings a fresh perspective rooted in digital innovation and sustainable finance. A graduate of the Ateneo de Manila University and Harvard Business School, he has spent over two decades in the Philippine financial sector.</p>
+                            <p>Under his stewardship, PFA has embarked on a journey of technological modernization while reinforcing its historical roots in stability. His "Sovereign Ledger" initiative reimagines the association as a digital-first curator of financial intelligence.</p>
+                            <p>His 2024 induction speech at the Makati Diamond Residences outlined three pillars for his term: Transparency in regulatory reporting, Digital Transformation of member services, and Sustainable Investment frameworks aligned with global ESG standards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Board of Trustees -->
+                <div class="mt-24 reveal">
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-10">Current Board of Trustees</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Carlo Enrico B. Lazatin</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">President</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Atty. Jude R. Romano</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Executive Vice President (External Affairs)</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Rosario "Nini" Crisostomo</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Secretary</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Abigail Marie Casanova</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Treasurer</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Rowell Agustin</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Arnaldo Bacabac Jr.</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Maria Celia Eleazar</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Jose Jesus Custodio</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Arthem Edward Flor</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1"><div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary">person</span></div><h3 class="text-xl font-bold text-primary">Anna Christina Vicente</h3><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-1">Trustee</p></div>
+                    </div>
+                </div>
+
+                <!-- Board of Directors (2024) -->
+                <div class="mt-24 reveal">
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-2">PFA Officers &amp; Directors</h3>
+                    <p class="text-on-surface-variant text-sm mb-10">From the 2024 PDF</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Carlo Enrico B. Lazatin</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">President</p><p class="text-on-surface-variant text-sm mt-1">DES Financing Corporation</p><p class="text-on-surface-variant text-xs">President &amp; CEO</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Eillen B. Mangubat</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Executive Vice President</p><p class="text-on-surface-variant text-sm mt-1">Asialink Finance Corporation</p><p class="text-on-surface-variant text-xs">President &amp; COO</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Atty. Maribel Dimayuga</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Corporate Secretary</p><p class="text-on-surface-variant text-sm mt-1">Toyota Financial Services Philippines</p><p class="text-on-surface-variant text-xs">Head for Compliance</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Ronald Roque L. Arambulo</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Treasurer</p><p class="text-on-surface-variant text-sm mt-1">BPI Century Tokyo Lease &amp; Finance Corporation</p><p class="text-on-surface-variant text-xs">SVP &amp; CFO</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Arnaldo S. Bacabac Jr.</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">ORIX Metro Leasing &amp; Finance Corporation</p><p class="text-on-surface-variant text-xs">EVP, Credit Group Head</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Benedict Carandang</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">First Circle Growth Finance Corporation</p><p class="text-on-surface-variant text-xs">VP for External Relations</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Charito Cole-Alfaro</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">First Industrial Finance Co. Inc.</p><p class="text-on-surface-variant text-xs">President &amp; CEO</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Louie F. Nonesa</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">CVM Finance &amp; Credit Corporation</p><p class="text-on-surface-variant text-xs">President &amp; COO</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-3 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Francisco M. Padilla III</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">SB Finance Inc.</p><p class="text-on-surface-variant text-xs">Head for Compliance</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-1 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Peter Paul I. Rigor</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">LBP Leasing &amp; Finance Corporation</p><p class="text-on-surface-variant text-xs">VP, Account Management Group Head</p></div></div>
+                        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow reveal reveal-delay-2 flex gap-4 items-start"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-on-primary text-base">person</span></div><div><h4 class="font-bold text-primary">Atty. Jude R. Romano</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Director</p><p class="text-on-surface-variant text-sm mt-1">HC Consumer Finance Philippines Inc.</p><p class="text-on-surface-variant text-xs">Head for External Affairs</p></div></div>
+                    </div>
+
+                    <!-- New Member Inducted 2024 -->
+                    <div class="mt-12 bg-surface-container p-8 rounded-xl reveal">
+                        <h4 class="text-lg font-bold text-primary mb-6">New Member Inducted (2024)</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex gap-4 items-start"><div class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-secondary-container text-base">person</span></div><div><h4 class="font-bold text-primary">Lo Ping Hsieh</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">Chairman</p><p class="text-on-surface-variant text-sm mt-1">Loan Star Lending Group Corporation</p></div></div>
+                            <div class="flex gap-4 items-start"><div class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-secondary-container text-base">person</span></div><div><h4 class="font-bold text-primary">Kristoffer John C. Dela Cruz</h4><p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-0.5">President / COO</p><p class="text-on-surface-variant text-sm mt-1">Loan Star Lending Group Corporation</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Member Companies ───────────────────────────────── -->
+        <section id="members" class="bg-background py-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-secondary font-headline uppercase tracking-widest text-sm mb-4 block">Our Network</span>
+                    <h2 class="text-4xl font-headline font-bold text-primary mb-4">Member Finance &amp; Leasing Companies</h2>
+                    <p class="text-on-surface-variant max-w-xl mx-auto">A growing network of financing, leasing, and lending companies across the Philippines.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 reveal">
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">88 Asia Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">ACOM Consumer Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">AEON Credit Service (Philippines) Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Algo Finance &amp; Leasing Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">AND Financing Corporation</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Argosy Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Asia Group Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Asia United Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Asialink Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">BDO Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Best Loan Credit Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">BOT Lease &amp; Finance Phils. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">BPI Century Tokyo Lease &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Bukas Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Card Leasing &amp; Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Caterpillar Financial Services Phils. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Cebu International Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Chailease Berjaya Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Cocolife Asset Management Co. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Comtrust Finance &amp; Investment Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Country Funders Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">CV Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">CVM Finance &amp; Credit Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">DBP Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">DES Financing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Digido Finance Corporation</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Encore Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Esquire Financing Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Fama Global Finance &amp; Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Filipino Financial Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Finacore Technology Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">First Circle Growth Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">First Industrial Credit Co. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">First Standard Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">First United Finance &amp; Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Global Dominion Financing Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Golden R&amp;L Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Good Morning Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Good Provider Financing &amp; Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Home Credit Philippines</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">JACCS Finance Phils. Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">JK Capital Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">LBP Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">League One Finance &amp; Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">LOLC Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Macondray Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Makati Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Mapfrecrest Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">MCC Money Shops Finance Co. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Novel Finance Co. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">ORIX Metro Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Paloo Financing Inc. (Cashalo)</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">PCCI Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Penta Capital Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Philippine Savings Bank</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Prime Global Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Puregold Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Radiowealth Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">RCBC Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Rykom Financing Corporation</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">SB Finance Company Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">SBM Leasing Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Snapworks Credit &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">South Asialink Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Streetcorner Finance Co. Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Summit Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Toyota Financial Services Phils. Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">UCPB Leasing &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Unicapital Finance &amp; Investments Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Unistar Credit &amp; Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Universal LMS Finance &amp; Leasing Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">USSC Finance Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Ventures Credit Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Welcome Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Y Finance Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Yulon Finance Philippines Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Accutrust Lending Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Destiny Lendfund Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Easyfund Lending Investor Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Fuse Lending Inc.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Phil Lending 101 Corp.</div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 text-sm text-on-surface hover:bg-surface-container transition-colors">Streetcorner Lending Corp.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Membership CTA ─────────────────────────────────── -->
+        <section id="membership" class="py-24 bg-primary text-on-primary text-center reveal">
+            <div class="max-w-4xl mx-auto px-8">
+                <h2 class="text-3xl md:text-5xl font-headline font-bold mb-8">Shape the Future of Finance.</h2>
+                <p class="text-on-primary-container text-lg mb-12">
+                    Join an elite collective of professionals dedicated to the advancement of the Philippine economy.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="mailto:secretariat@pfa.org.ph" class="border border-on-primary-container text-on-primary-container px-10 py-4 rounded-md font-bold hover:bg-white/10 transition-all">
+                        Contact Secretariat
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-20 mt-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <div class="md:col-span-4"><img src="images/pfa.png" alt="PFA Logo" class="h-12 w-auto mb-6" /><p class="text-slate-400 text-sm leading-relaxed max-w-xs">The oldest and only professional association for financing, leasing, and lending in the Philippines. Established 1962.</p><div class="flex gap-4 mt-6"><a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">public</span></a><a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">work</span></a><a href="#" aria-label="Email" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">mail</span></a></div></div>
+                <div class="md:col-span-2"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Association</h4><ul class="space-y-4 text-slate-400 text-sm"><li><a class="hover:text-amber-400 transition-colors" href="about.html#mission">Mission &amp; Vision</a></li><li><a class="hover:text-amber-400 transition-colors" href="about.html#timeline">Presidents Timeline</a></li><li><a class="hover:text-amber-400 transition-colors" href="about.html#contributions">Key Contributions</a></li><li><a class="hover:text-amber-400 transition-colors" href="about.html">Leadership</a></li></ul></div>
+                <div class="md:col-span-2"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">News &amp; Research</h4><ul class="space-y-4 text-slate-400 text-sm"><li><a class="hover:text-amber-400 transition-colors" href="news.html">All News</a></li><li><a class="hover:text-amber-400 transition-colors" href="news.html?filter=Economic Research">Economic Research</a></li><li><a class="hover:text-amber-400 transition-colors" href="news.html?filter=Regulatory">Regulatory Updates</a></li><li><a class="hover:text-amber-400 transition-colors" href="news.html?filter=Capital Markets">Capital Markets</a></li></ul></div>
+                <div class="md:col-span-4"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Stay Informed</h4><p class="text-slate-400 text-sm mb-4">Subscribe to our weekly economic digest and regulatory updates.</p><form class="flex gap-2" onsubmit="return false;"><input class="bg-white/5 border border-white/10 rounded-lg flex-1 text-sm text-white placeholder-slate-500 px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-amber-400" placeholder="Email Address" type="email" /><button class="bg-amber-400 text-primary font-bold px-4 py-2.5 rounded-lg text-sm hover:bg-amber-300 transition-colors">Join</button></form><p class="text-slate-500 text-xs mt-3">Secretariat: <a href="#" class="hover:text-amber-400 transition-colors"></a></p></div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs">© 2025 Philippine Finance Association. All Rights Reserved.</p>
+                <div class="flex gap-8"><a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Terms of Service</a><a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Privacy Policy</a><a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Contact Secretariat</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
