@@ -1,0 +1,180 @@
+/* ============================================================
+   PFA — Global Stylesheet
+   ============================================================ */
+
+/* Base */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: max(884px, 100dvh);
+}
+
+.font-headline {
+    font-family: 'Manrope', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Nav */
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* About page gradient text */
+.text-editorial-gradient {
+    background: linear-gradient(135deg, #001430 0%, #284775 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================================================
+   Hero Carousel
+   ============================================================ */
+.hero-carousel {
+    position: relative;
+    min-height: 795px;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateX(60px);
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    position: relative;
+}
+
+.hero-slide.exit-left {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+/* Carousel dots */
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    width: 28px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* Carousel nav arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-arrow.prev { left: 24px; }
+.carousel-arrow.next { right: 24px; }
+
+/* ============================================================
+   Scroll Reveal Animation
+   ============================================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ============================================================
+   News Filter Buttons
+   ============================================================ */
+.filter-btn {
+    background: transparent;
+    color: #43474f;
+    border: 1px solid #c4c6d0;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background: #e7eefe;
+    color: #001430;
+}
+
+.filter-btn.active {
+    background: #001430;
+    color: #ffffff;
+    border-color: #001430;
+}
+
+/* ============================================================
+   Article Prose Body
+   ============================================================ */
+.prose-article p {
+    margin-bottom: 1.25rem;
+    color: #43474f;
+    line-height: 1.8;
+}
+
+.prose-article strong {
+    color: #001430;
+    font-weight: 700;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Timeline dot positioning fix */
+@media (min-width: 768px) {
+    .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

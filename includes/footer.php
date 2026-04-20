@@ -1,0 +1,66 @@
+<?php /** Shared Footer */ ?>
+<footer class="bg-primary text-white py-20 mt-20">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+
+            <div class="md:col-span-4">
+                <img src="images/pfa.png" alt="PFA Logo" class="h-12 w-auto mb-6" />
+                <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                    The oldest and only professional association for financing, leasing, and lending in the Philippines. Established 1962.
+                </p>
+                <div class="flex gap-4 mt-6">
+                    <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-sm">work</span>
+                    </a>
+                    <a href="#" aria-label="Email" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-400 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-2">
+                <h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Association</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><a class="hover:text-amber-400 transition-colors" href="about.php#mission">Mission &amp; Vision</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="about.php#timeline">Presidents Timeline</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="about.php#contributions">Key Contributions</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="about.php">Leadership</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">News &amp; Research</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><a class="hover:text-amber-400 transition-colors" href="news.php">All News</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="news.php?filter=Economic Research">Economic Research</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="news.php?filter=Regulatory">Regulatory Updates</a></li>
+                    <li><a class="hover:text-amber-400 transition-colors" href="news.php?filter=Capital Markets">Capital Markets</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4">
+                <h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Stay Informed</h4>
+                <p class="text-slate-400 text-sm mb-4">Subscribe to our weekly economic digest and regulatory updates.</p>
+                <form class="flex gap-2" onsubmit="return false;">
+                    <input class="bg-white/5 border border-white/10 rounded-lg flex-1 text-sm text-white placeholder-slate-500 px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-amber-400"
+                        placeholder="Email Address" type="email" />
+                    <button class="bg-amber-400 text-primary font-bold px-4 py-2.5 rounded-lg text-sm hover:bg-amber-300 transition-colors">Join</button>
+                </form>
+                <p class="text-slate-500 text-xs mt-3">Secretariat: <a href="#" class="hover:text-amber-400 transition-colors"></a></p>
+            </div>
+
+        </div>
+
+        <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-500 text-xs">© <?= date('Y') ?> Philippine Finance Association. All Rights Reserved.</p>
+            <div class="flex gap-8">
+                <a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Terms of Service</a>
+                <a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Privacy Policy</a>
+                <a class="text-slate-400 hover:text-amber-400 text-xs transition-colors" href="#">Contact Secretariat</a>
+            </div>
+        </div>
+    </div>
+</footer>
