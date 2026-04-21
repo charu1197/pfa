@@ -170,6 +170,26 @@ body {
     overflow: hidden;
 }
 
+/* Footer text override — all text white, amber stays orange */
+footer.bg-primary * {
+    color: #ffffff;
+}
+footer.bg-primary .text-amber-400,
+footer.bg-primary h4.text-amber-400,
+footer.bg-primary [class*="hover\\:text-amber-400"]:hover {
+    color: #f1ba40 !important;
+}
+footer.bg-primary button {
+    color: inherit;
+}
+@media (min-width: 768px) {
+    .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 /* Timeline dot positioning fix */
 @media (min-width: 768px) {
     .timeline-dot {
