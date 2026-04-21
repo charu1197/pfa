@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board of Trustees | Philippine Finance Association</title>
+    <link rel="icon" type="image/png" href="images/pfa-logo.png">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode:"class",
+            theme:{extend:{colors:{
+                "surface-tint":"#415f8f","surface-container-high":"#e2e8f8","on-secondary-fixed-variant":"#594325",
+                "on-primary-fixed-variant":"#f1ba40","on-secondary":"#ffffff","tertiary":"#111518",
+                "surface-container-highest":"#dce2f3","on-primary":"#ffffff","inverse-surface":"#2a313d",
+                "secondary-fixed":"#ffddb6","outline-variant":"#c4c6d0","on-primary-fixed":"#001b3d",
+                "on-tertiary-fixed-variant":"#44474b","surface-container":"#e7eefe","on-surface":"#151c27",
+                "on-secondary-fixed":"#291801","surface":"#f9f9ff","inverse-primary":"#aac7fd",
+                "primary-container":"#002855","on-surface-variant":"#43474f","tertiary-fixed":"#e1e2e7",
+                "tertiary-fixed-dim":"#c4c6cb","surface-variant":"#dce2f3","on-error-container":"#93000a",
+                "error":"#ba1a1a","primary":"#002ecc","surface-container-lowest":"#ffffff",
+                "on-background":"#151c27","surface-container-low":"#f0f3ff","primary-fixed":"#d6e3ff",
+                "on-error":"#ffffff","background":"#f9f9ff","surface-bright":"#f9f9ff","outline":"#747780",
+                "on-tertiary":"#ffffff","primary-fixed-dim":"#aac7fd","on-secondary-container":"#785e3e",
+                "error-container":"#ffdad6","secondary":"#735a3a","on-primary-container":"#7490c3",
+                "secondary-container":"#fddab2","surface-dim":"#d3daea","secondary-fixed-dim":"#e2c19b",
+                "on-tertiary-fixed":"#191c1f","inverse-on-surface":"#ebf1ff","tertiary-container":"#26292d",
+                "on-tertiary-container":"#8d9094",
+            },borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},
+            fontFamily:{headline:["Manrope"],body:["Inter"],label:["Inter"]}}},
+        };
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        /* ── Self-contained dropdown ── */
+        .glass-nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-trigger { cursor: pointer; display: inline-flex; align-items: center; gap: 4px; user-select: none; }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 240px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 40px rgba(0,46,204,0.13), 0 2px 8px rgba(0,0,0,0.07);
+            padding: 8px;
+            z-index: 9999;
+            border: 1px solid rgba(0,46,204,0.07);
+            animation: dropFade 0.18s ease;
+        }
+        @keyframes dropFade {
+            from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        /* Invisible bridge so cursor can reach the menu without it closing */
+        .nav-dropdown-menu::after {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 0;
+            width: 100%;
+            height: 16px;
+        }
+        /* Arrow pointer */
+        .nav-dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            width: 14px; height: 14px;
+            background: #fff;
+            border-left: 1px solid rgba(0,46,204,0.07);
+            border-top: 1px solid rgba(0,46,204,0.07);
+            border-radius: 3px 0 0 0;
+            transform: translateX(-50%) rotate(45deg);
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 9px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #1e293b;
+            text-decoration: none;
+            transition: background 0.15s, color 0.15s;
+            white-space: nowrap;
+        }
+        .nav-dropdown-menu a:hover { background: #f0f3ff; color: #002ecc; }
+        .nav-dropdown-menu a .material-symbols-outlined {
+            font-size: 18px;
+            color: #002ecc;
+            opacity: 0.7;
+            flex-shrink: 0;
+        }
+        .nav-dropdown-menu a:hover .material-symbols-outlined { opacity: 1; }
+        /* Rotate arrow when open */
+        .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+        .dropdown-arrow { transition: transform 0.2s ease; display: inline-block; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+    <!-- NAV -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm glass-nav">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center h-20">
+            <a href="index.html" class="flex items-center">
+                <img src="images/pfa.png" alt="PFA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center gap-8" style="position:relative;">
+                <a class="text-slate-500 font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-trigger text-primary font-bold border-b-2 border-amber-500 pb-0.5" tabindex="0">
+                        About <span class="material-symbols-outlined dropdown-arrow" style="font-size:18px;vertical-align:middle;line-height:1;">expand_more</span>
+                    </span>
+                    <div class="nav-dropdown-menu">
+                        <a href="about.html"><span class="material-symbols-outlined">info</span>About PFA</a>
+                        <a href="presidents.html"><span class="material-symbols-outlined">history_edu</span>Presidents</a>
+                        <a href="trustees.html"><span class="material-symbols-outlined">groups</span>Board of Trustees</a>
+                        <a href="officers.html"><span class="material-symbols-outlined">badge</span>Officers &amp; Directors</a>
+                        <a href="members.html"><span class="material-symbols-outlined">corporate_fare</span>Member Companies</a>
+                    </div>
+                </div>
+                <a class="text-slate-500 font-medium hover:text-primary transition-colors" href="news.html">News</a>
+                <a class="text-slate-500 font-medium hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-surface-container transition-colors" aria-label="Open menu">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+            <a href="about.html#membership" class="hidden md:block bg-primary px-6 py-2.5 rounded-lg text-on-primary font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-primary/10">
+                Join PFA
+            </a>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4 space-y-1">
+            <a href="index.html" class="block py-2 text-slate-600 font-medium">Home</a>
+            <div>
+                <button id="mobile-about-btn" class="flex items-center justify-between w-full py-2 text-primary font-bold">
+                    About <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+                <div id="mobile-about-menu" class="hidden pl-4 space-y-1 pb-2">
+                    <a href="about.html" class="block py-1.5 text-slate-600 text-sm">About PFA</a>
+                    <a href="presidents.html" class="block py-1.5 text-slate-600 text-sm">Presidents</a>
+                    <a href="trustees.html" class="block py-1.5 text-slate-600 text-sm">Board of Trustees</a>
+                    <a href="officers.html" class="block py-1.5 text-slate-600 text-sm">Officers &amp; Directors</a>
+                    <a href="members.html" class="block py-1.5 text-slate-600 text-sm">Member Companies</a>
+                </div>
+            </div>
+            <a href="news.html" class="block py-2 text-slate-600 font-medium">News</a>
+            <a href="gallery.html" class="block py-2 text-slate-600 font-medium">Gallery</a>
+            <a href="about.html#membership" class="block py-2 text-amber-600 font-bold">Join PFA</a>
+        </div>
+    </header>
+    <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});
+    document.getElementById('mobile-about-btn')?.addEventListener('click',function(){document.getElementById('mobile-about-menu').classList.toggle('hidden');});
+    </script>
+
+    <main class="pt-20">
+
+        <!-- Page Hero -->
+        <section class="relative bg-primary overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="images/pfa-img2.jpg" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/60"></div>
+            <div class="relative max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
+                <div class="flex items-center gap-2 text-secondary-fixed text-xs font-bold uppercase tracking-widest mb-4">
+                    <a href="about.html" class="hover:text-amber-300 transition-colors">About</a>
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    <span>Leadership</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white font-headline mb-4">Current Board of Trustees</h1>
+                <p class="text-on-primary-container text-lg max-w-xl">The governing body of the Philippine Finance Association, guiding the organization's strategic direction.</p>
+            </div>
+        </section>
+
+        <!-- Trustees Grid -->
+        <section class="bg-background py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal">
+                        <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-on-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Carlo Enrico B. Lazatin</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">President</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-1">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Atty. Jude R. Romano</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Executive Vice President (External Affairs)</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-2">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Rosario "Nini" Crisostomo</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Secretary</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-3">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Abigail Marie Casanova</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Treasurer</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Rowell Agustin</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-1">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Arnaldo Bacabac Jr.</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-2">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Maria Celia Eleazar</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-3">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Jose Jesus Custodio</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Arthem Edward Flor</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/10 reveal reveal-delay-1">
+                        <div class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center mb-6"><span class="material-symbols-outlined text-primary text-2xl">person</span></div>
+                        <h3 class="text-xl font-bold text-primary font-headline">Anna Christina Vicente</h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-semibold mt-2">Trustee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <div class="md:col-span-4"><h3 class="text-amber-400 text-xl font-bold tracking-widest mb-6">PFA</h3><p class="text-white text-sm leading-relaxed max-w-xs">Professional association for financing, leasing, and lending in the Philippines. Established 1962.</p></div>
+                <div class="md:col-span-2"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Leadership</h4><ul class="space-y-4 text-white text-sm"><li><a class="hover:text-amber-400 transition-colors" href="presidents.html">Presidents</a></li><li><a class="hover:text-amber-400 transition-colors" href="trustees.html">Board of Trustees</a></li><li><a class="hover:text-amber-400 transition-colors" href="officers.html">Officers &amp; Directors</a></li><li><a class="hover:text-amber-400 transition-colors" href="members.html">Member Companies</a></li></ul></div>
+                <div class="md:col-span-2"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Pages</h4><ul class="space-y-4 text-white text-sm"><li><a class="hover:text-amber-400 transition-colors" href="news.html">News</a></li><li><a class="hover:text-amber-400 transition-colors" href="gallery.html">Gallery</a></li></ul></div>
+                <div class="md:col-span-4"><h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">Stay Informed</h4><form class="flex gap-2" onsubmit="return false;"><input class="bg-white/5 border border-white/10 rounded-lg flex-1 text-sm text-white placeholder-slate-500 px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-amber-400" placeholder="Email Address" type="email" /><button class="bg-amber-400 text-primary font-bold px-4 py-2.5 rounded-lg text-sm hover:bg-amber-300 transition-colors">Join</button></form></div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white text-xs">© 2025 Philippine Finance Association. All Rights Reserved.</p>
+                <div class="flex gap-8"><a class="text-white hover:text-amber-400 text-xs transition-colors" href="#">Privacy Policy</a><a class="text-white hover:text-amber-400 text-xs transition-colors" href="#">Contact Secretariat</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

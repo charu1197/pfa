@@ -31,6 +31,73 @@ body {
 }
 
 /* ============================================================
+   Dropdown Nav
+   ============================================================ */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #e2e8f8;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0,46,204,0.10);
+    z-index: 100;
+    padding: 6px 0;
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    display: block !important;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #43474f;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #f0f3ff;
+    color: #002ecc;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.nav-dropdown-trigger .dropdown-arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ============================================================
    Hero Carousel
    ============================================================ */
 .hero-carousel {
@@ -181,13 +248,6 @@ footer.bg-primary [class*="hover\\:text-amber-400"]:hover {
 }
 footer.bg-primary button {
     color: inherit;
-}
-@media (min-width: 768px) {
-    .timeline-dot {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 /* Timeline dot positioning fix */
